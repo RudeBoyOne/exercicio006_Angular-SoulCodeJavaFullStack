@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="container_titulo">
+        <h1>Pesquise por um usuário do Github</h1>
+        <img src="../../../../assets/img/octocatGitHub.png" alt="logo octocat do github" id="img_titulo">
+    </div>
+    <div class="search">
+        <mat-form-field appearance="outline">
+            <mat-label>Digite o username do usuário no Github</mat-label>
+            <input 
+                type="text"
+                matInput
+                autocomplete="off"
+                [formControl]="usernameToFind"
+                (keyup.enter)="showDialog()"
+                >
+                <mat-error>
+                    Informe um username para ser pesquisado!
+                </mat-error>
+        </mat-form-field>
+
+        <button     
+            mat-stroked-button 
+            color="primary"
+            [disabled]="usernameToFind.invalid"
+            (click)="showDialog()"
+            >
+        <mat-icon>search</mat-icon>
+        </button>
+    </div>
+</div>

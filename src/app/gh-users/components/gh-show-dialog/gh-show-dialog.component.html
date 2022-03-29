@@ -1,0 +1,61 @@
+<div mat-dialog-content>
+    <mat-progress-spinner
+    color="primary"
+    mode="indeterminate"
+    *ngIf="user == null; else content"
+    ></mat-progress-spinner>
+
+<ng-template #content>
+        <div class="header">
+            <img [src]="user?.avatar_url" id="img_perfil">
+            <h2 mat-dialog-title> {{ user?.name }} </h2>
+            <div class="header_link">
+                <p> 
+                    <mat-icon>account_circle</mat-icon>  
+                </p>
+                <a [href]="user?.html_url" target="_blanck" class="header_links">
+                    <h3>{{ user?.login }}</h3> 
+                </a>
+            </div>
+            <p id="bio">{{ user?.bio }}</p>
+        </div>
+        <div class="subHeader">
+            <div class="header_link">
+                <p>
+                    <mat-icon>account_box</mat-icon>
+                </p>
+                <a [href]="user?.blog" target="_blank" class="header_links"> 
+                    <h4>Linkedin</h4> 
+                </a>
+            </div>
+            <div class="header_location">
+                <p>
+                    <mat-icon>room</mat-icon>
+                </p>
+                <h4> 
+                    {{ user?.location }}
+                </h4>
+            </div>
+            <h4> Followers: {{ user?.followers }}</h4>
+            <h4> Following: {{ user?.following }}</h4>
+        </div>
+
+        <h2>Repositórios:</h2>
+        <div class="container_cards">
+            <mat-card *ngFor="let r of repos" class="card">
+                <a [href]="r?.html_url" target="_blank" class="card_links">
+                    <mat-card-title>{{ r?.name }}</mat-card-title>
+                    <mat-card-content>{{ r?.description }}</mat-card-content>
+                    <mat-card-footer class="card_footer">
+                        <p>
+                           Stars: <strong>{{ r?.stargazers_count }}</strong> 
+                        </p>
+                        <p>
+                           Language: <strong>{{ r?.language }}</strong> 
+                        </p>
+                    </mat-card-footer>
+                </a>
+            </mat-card>
+        </div>
+    </ng-template>
+</div>

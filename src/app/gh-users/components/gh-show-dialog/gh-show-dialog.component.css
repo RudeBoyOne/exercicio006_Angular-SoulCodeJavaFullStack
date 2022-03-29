@@ -1,0 +1,99 @@
+/* Div mãe */
+.mat-dialog-content{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 65vw;
+}
+
+/* Header do Dialog */
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#img_perfil{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    border: 3px solid #3f51b5;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.header h2{
+    margin: 0;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#bio{
+    text-transform: uppercase;
+    word-spacing: 1px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header_link{
+    display: flex;
+    align-items: center;
+    color: #3f51b5;
+}
+
+.header_links{
+    text-decoration: none;
+    color: #3f51b5;
+}
+
+/* Sub-header  Dialog*/
+
+.subHeader{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: max-content;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.header_location{
+    display: flex;
+    align-items: center;    
+}
+
+/* Cards repositórios */
+
+.container_cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.card_links{
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+.card_footer{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0;
+}

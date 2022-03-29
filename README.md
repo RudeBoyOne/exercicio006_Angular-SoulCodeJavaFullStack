@@ -1,4 +1,12 @@
-# RequisicaoHTTp
+# Exer006 - Angular Requisições HTTP - SoulCode Java FullStack
+<br>
+<br>
+
+![exemplo do exercício em gif](./src/assets/img/exemGif.gif)
+
+<br>
+
+## Informações Angular 👇 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
